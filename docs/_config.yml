@@ -1,0 +1,35 @@
+# This config file renders the "primer-spec" theme from:
+# https://github.com/eecs485staff/primer-spec
+# This theme is built on the default GitHub Markdown theme "Primer", and
+# optionally renders a sidebar to easily navigate project specs.
+
+title: "Lab 00 - Template"
+repository: eecs281staff/l00-template
+favicon: https://eecs281staff.github.io/eecs281.org/assets/images/eecs281favicon.ico
+
+# Build settings
+remote_theme: https://github.com/marcus-darden/primer-spec
+plugins:
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+kramdown:
+  input: GFM
+readme_index:
+  remove_originals: true
+  with_frontmatter: true
+
+exclude:
+  - solutions.md
+
+primerSpec:
+  sitemap:
+    label: ""
+    externalLinks:
+      - title: "Lab 00 Slides"
+        url: l00-slides.pdf 

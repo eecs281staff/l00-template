@@ -1,0 +1,6 @@
+*.tgz
+.DS_Store
+.markdownlint.json
+.vscode
+.sass-cache
+_site

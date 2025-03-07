@@ -1,90 +1,75 @@
-# Lab 00 Template Readme
+# How to use this Repo Template
 
-The published lab can be found at
-[https://eecs281staff.github.io/l00-template](https://eecs281staff.github.io/l00-template).
+This how-to uses "Lab 06 - Maps, Sets, and Enums" as an example.
 
-![QR Code Link](images/lab00.qr.png)
+1. Make a copy of the template
+    1. Select "Use this template->Create a new repository"
+    2. Choose a proper repo title (eg. l06-maps-sets-enums)
+    3. Change the owner to "eecs281staff"
+    4. Mark the repo as private
+    5. Rename README.md to HOWTO.md
+    6. Rename ABOUT.md to README.md
 
+2. Create a QR Code for easy link sharing
+   ([see below](#create-a-qr-code-for-lab-url)) and save it in `images/` with
+   a filename like `lab06.qr.png`.
 
-## Changing the Lab Due Date
+3. Update the following settings
+    - In `README.md`
+        1. Change the title (H1, #) of the file
+        2. Change the published lab link to match repo title from step 1 above
+        3. Update the link to the filename for the QR Code from step 2 above
+    - Rename `docs/l00-template/` like `docs/l06-maps-sets-enums`
+    - In `docs/_config.yml`
+        1. Change the title
+        2. Change the repository root
+        3. Change primerSpec:externalLinks:title
+        4. Change primerSpec:externalLinks:url
+    - In `docs/files.md`
+        - Update "Download all files" link appropriately
+    - In `docs/Makefile`
+        1. Change PROJECTID to match the one used on the Autograder
+        2. Change EXECUTABLE like lab06
+        3. Change PROJECTNAME like l06-maps-sets-enums
 
-Edit the "lab-due" variable in the front matter of docs/README.md. This
-string is quoted because the time contains a colon (:) which will break YAML
-parsing.
+4. Add content to the following locations
 
-## Adding Files or External Links
+    - In `docs/README.md`
+        - Convert content from original pdfs to markdown
+        - Change `title` in front matter
+        - Change `lab-due` date in front matter
+    - Copy/create any needed images linked in `docs/README.md` to
+      `docs/images/`
+    - Copy slides pdf like `docs/l06-slides.pdf`
+    - In `docs/solutions.md`
+        - **DO NOT RENAME THE FILE**
+        - Add solutions for any relevant sections
+        - Change `title` in front matter
+    - Add any files students download to `docs/l06-maps-sets-enums/`
+    - Add any notes about downloaded files above "Tarball" in `docs/files.md`
 
-- **Adding New Page(s):** Include new files (either markdown or HTML) in the
-  docs/ directory and link to them from docs/README.md.
-- **Adding Downloadable Content:** Include new files (eg. PowerPoint or PDF)
-  in the docs/ directory and add them to the "externalLinks" section in
-  docs/_config.yml.  
+5. Copy the original lab pdfs to `original-pdfs/`
 
-```console
-primerSpec:
-  sitemap:
-    label: ""
-    externalLinks:
-      - title: "Lab 00 Slides"
-        url: l00-slides.pdf 
-```
-- **Adding External Links:** Edit "externalLinks" as above but include a
-  fully qualified URL.
-- **Adding Images or Figures:** Include any pictures (eg. JPG or PNG) in the
-  docs/ directory and add them to the pages using markdown.  
+## Create a QR Code for lab URL
 
-```console
-![Alt Text](images/image.png)
-```
+Create QR Code at [www.qrcode-monkey.com](www.qrcode-monkey.com) with the
+following settings:
 
-  For drawings, use Excalidraw to create the included files. These display
-  like standard PNG images, but the source for the drawing is included in the
-  file, so it may be edited later if necessary.
+- Enter Content
+    - Your URL: https://eecs281staff.github.io/lab00-template
+    - Statistics and Editability: Off
+- Set Colors:
+    - Foreground Color
+        - Single Color
+        - Custom Eye Color
+        - #0000000
+    - Eye Color
+        - #00274C
+        - #00274C
+    - Background Color
+        - #FFFFFF
+- Add Logo Image
+    - Upload Image: https://eecs281staff.github.io/eecs281.org/assets/images/eecs281logo.png
+    - Remove Background Behind Logo: Yes
 
-## Other Editing Concerns
-
-### Document Structure
-
-Labs have multiple sections that should be labeled with uppercase alpha
-descriptors followed by a colon and a short title (eg. "Part A: Feedback
-Form", "Part B: Handwritten Problem", etc.). Each of these sections should be
-level two headings (##), and together give students a complete high-level
-overview of the lab's requirements. Each section should start with a level
-three heading (###) that gives the point value "15 Points" or "UNGRADED" for
-that section.
-
-To keep things clean visually, do not include any other level two headers,
-and keep any additional level three headers out of the table of contents:  
-
-```console
-### Part B Subsection
-{: .primer-spec-toc-ignore }
-```
-
-### Using Math Formulas
-
-1. Ensure that `latex: true` is included in the front matter of any page with
-   formulas.
-2. Surround formulas with two dollar signs ($$) to interpret LaTeX
-   expressions for typesetting. Kramdown does a good job deciding whether
-   to include the formula inline (span) or block (div). To force an inline
-   formula, precede it with a backslash (\\).  
-
-```console
-    # This will show up as a block element, works but ugly
-    1. $$y = mx + b$$
-
-    # This forced inline version looks nicer
-    1. \$$y = mx + b$$
-```
-
-### Custom Styling or Extensions
-
-To get the question options of the quizes to use capital letters (eg. A., B.)
-additional styling was added via a change to the document head. This can be
-found in `_includes/custom-head.html`, which loads a stylesheet
-(`assets/css/quiz.css`). The questions need to be in an ordered list that is
-not inside any other list, and the answers need to be an ordered list inside
-of an ordered list.
-
-Any additional custom styling or extensions can be included using this method.
+Make sure size is 1000x1000 (default) and "Download PNG".

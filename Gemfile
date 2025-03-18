@@ -15,6 +15,7 @@ gem 'kramdown-parser-gfm'
 
 # Replacing deprecated gems
 gem 'csv'
+gem 'json', '>= 2.10.2'
 
 # GitHub Pages doesn't support jekyll 4.0 yet
 gem 'jekyll', '<4.0'

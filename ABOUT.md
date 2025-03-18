@@ -46,12 +46,13 @@ primerSpec:
 ### Document Structure
 
 Labs have multiple sections that should be labeled with uppercase alpha
-descriptors followed by a colon and a short title (eg. "Part A: Feedback
-Form", "Part B: Handwritten Problem", etc.). Each of these sections should be
+descriptors followed by a colon and a short title, beginning with "Part A:
+Handwritten Problem (5)". Each of these sections should be
 level two headings (##), and together give students a complete high-level
-overview of the lab's requirements. Each section should start with a level
-three heading (###) that gives the point value "15 Points" or "UNGRADED" for
-that section.
+overview of the lab's requirements. Display the number of points each section
+is worth in parentheses, after the title. If a section is not worth points
+then follow the title with "(UNGRADED)", but each section must display its
+contribution the lab grade.
 
 To keep things clean visually, do not include any other level two headers,
 and keep any additional level three headers out of the table of contents:  
@@ -76,6 +77,9 @@ and keep any additional level three headers out of the table of contents:
 
     # This forced inline version looks nicer
     1. \$$y = mx + b$$
+
+    # Here, additional text allows the default to work without forcing inline
+    1. $$y = mx + b$$ is a linear equation
 ```
 
 ### Custom Styling or Extensions

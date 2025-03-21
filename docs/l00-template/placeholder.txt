@@ -1,0 +1,12 @@
+This file can be removed from the project, as long as there are other files
+in this directory. If there are no files to be included with the lab edit
+`docs/Makefile` to remove the "files" target:
+
+``` console
+...
+
+files:
+
+.PHONY: files
+<end of file>
+```
